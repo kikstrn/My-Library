@@ -12,25 +12,25 @@
 Let me know if you have a good idea to rename this one, i dont want to put a $  
 vSeb() is the equivalent of the $ of Jquery.
 
-> vSeb("#myId") 
+> vSeb("#myId")  
 return the element with the id "myId"
 
-> vSeb(".myClass")
+> vSeb(".myClass")  
 return an array with the elements with the class "myClass"
 
-> vSeb("span")
+> vSeb("span")  
 return an array with the elements with the localName "span"
 
 #### You can add a name research exemple :
 
-> vSeb("myid[myName]")
+> vSeb("myid[myName]")  
 return the element with the id "myId" and the name "myName"
 
 but if you've put a name on an element that shouldn't have one it will return an error.
 
 #### You can also search only by name :
 
-> vSeb("[myName]")
+> vSeb("[myName]")  
 return the element with the name "myName"
 
 
