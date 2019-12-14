@@ -112,5 +112,6 @@ return an error hi in the console.
 
 # Currently working on :
 
+### -Upgrading the code with the redundant part by replacing them with a function
 ### -Adding some return of error from the vSeb() function
 ### -Adding function of element loaded
