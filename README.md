@@ -26,7 +26,7 @@ return an array with the elements with the localName "span"
 
 #### You can add a name research exemple :
 
-> vSeb("myid[myName]")  
+> vSeb("#myid[myName]")  
 
 return the element with the id "myId" and the name "myName"
 
