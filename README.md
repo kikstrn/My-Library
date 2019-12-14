@@ -9,28 +9,28 @@
 
 
 ## vSeb()
-Let me know if you have a good idea to rename this one, i dont want to put a $
+Let me know if you have a good idea to rename this one, i dont want to put a $  
 vSeb() is the equivalent of the $ of Jquery.
 
-vSeb("#myId") 
+> vSeb("#myId") 
 return the element with the id "myId"
 
-vSeb(".myClass")
+> vSeb(".myClass")
 return an array with the elements with the class "myClass"
 
-vSeb("span")
+> vSeb("span")
 return an array with the elements with the localName "span"
 
 #### You can add a name research exemple :
 
-vSeb("myid[myName]")
+> vSeb("myid[myName]")
 return the element with the id "myId" and the name "myName"
 
 but if you've put a name on an element that shouldn't have one it will return an error.
 
 #### You can also search only by name :
 
-vSeb("[myName]")
+> vSeb("[myName]")
 return the element with the name "myName"
 
 
@@ -43,7 +43,7 @@ Think of this one as a sentance like :
 On this event from this element do this.
 
 Exemple:
-on("eventName","selectedElement(s)",function to do)
+> on("eventName","selectedElement(s)",function to do)
 
 
 
@@ -52,7 +52,7 @@ on("eventName","selectedElement(s)",function to do)
 This will add a class on the choosen element(s)
 
 Exemple:
-addClass("myClass",myElement(s))
+> addClass("myClass",myElement(s))
 
 
 
@@ -61,7 +61,7 @@ addClass("myClass",myElement(s))
 This will remove a class on the choosen element(s)
 
 Exemple:
-delClass("myClass",myElement(s))
+> delClass("myClass",myElement(s))
 
 
 ## toggleClass()
@@ -70,7 +70,7 @@ This will add a class on the choosen element(s) which does not have already the 
 AND this will remove the class on the choose, element(s) chich does already have the class.
 
 Exemple:
-togglClass("myClass",myElement(s))
+> togglClass("myClass",myElement(s))
 
 
 
@@ -79,7 +79,7 @@ togglClass("myClass",myElement(s))
 This will display an elements which is currently not displayed.
 
 Exemple:
-show(myElement(s))
+> show(myElement(s))
 
 
 
@@ -88,7 +88,7 @@ show(myElement(s))
 This will hide an elements which is currently displayed.
 
 Exemple:
-hide(myElement(s))
+> hide(myElement(s))
 
 
 
@@ -97,7 +97,7 @@ hide(myElement(s))
 It is a simplified console.log().
 
 Exemple:
-CL("hi")
+> CL("hi")
 return hi in the console.
 
 
@@ -107,7 +107,7 @@ return hi in the console.
 It is a simplified console.error().
 
 Exemple:
-CE("hi")
+> CE("hi")
 return an error hi in the console.
 
 
