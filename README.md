@@ -9,6 +9,7 @@
 
 
 ## vSeb()
+Let me know if you have a good idea to rename this one, i dont want to put a $
 vSeb() is the equivalent of the $ of Jquery.
 
 vSeb("#myId") 
