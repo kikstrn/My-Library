@@ -46,15 +46,15 @@ function vSeb(quoiChopper){
       for (let eltToGet = indName; eltToGet < quoiChopper.length-1; eltToGet++) {
         tempStore += quoiChopper[indName];
       }
-        for(let mayHaveName = 0; mayHaveName < canHaveName.length; mayHaveName++){
-          if(document.getElementById(valueAvantName).localName == canHaveName[mayHaveName]){
-            canIt = true;
-            return document.getElementById(valueAvantName);
-          }
+      for(let mayHaveName = 0; mayHaveName < canHaveName.length; mayHaveName++){
+        if(document.getElementById(valueAvantName).localName == canHaveName[mayHaveName]){
+          canIt = true;
+          return document.getElementById(valueAvantName);
         }
-        if(!canIt){
-          CE("Un erreur s'est produite soit : \n-aucun élément possédant l'id recherché n'accepte de name\n-le name n'a pas était trouvé")
-        }
+      }
+      if(!canIt){
+        CE("Un erreur s'est produite soit : \n-aucun élément possédant l'id recherché n'accepte de name\n-le name n'a pas était trouvé")
+      }
     } else {
       for (let avantName = 1 ; avantName < quoiChopper.length ; avantName++){
         valueAvantName += quoiChopper[avantName];
@@ -111,19 +111,57 @@ function vSeb(quoiChopper){
 }
 
 function on(monEvent,monElement,monAction){
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      monElement[i].addEventListener(monEvent,monAction,false);
+    }
+  } else {
     monElement.addEventListener(monEvent,monAction,false);
+  }
 }
 
 function addClass(maClass,monElement) {
-  let mesClass = monElement.className.split(" ");
-  if (mesClass.indexOf(maClass) == -1) {
-    monElement.className += " " + maClass;
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      let mesClass = monElement[i].className.split(" ");
+      if (mesClass.indexOf(maClass) == -1) {
+        monElement[i].className += " " + maClass;
+      }
+    }
+  } else {
+    let mesClass = monElement.className.split(" ");
+    if (mesClass.indexOf(maClass) == -1) {
+      monElement.className += " " + maClass;
+    }
   }
 }
 function delClass(maClass,monElement){
-  monElement.className = monElement.className.replace(maClass, "");
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      monElement[i].className = monElement[i].className.replace(maClass, "");
+    }
+  } else {
+    monElement.className = monElement.className.replace(maClass, "");
+  }
 }
 function toggleClass(maClass, monElement){
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      if (monElement[i].classList) {
+        monElement[i].classList.toggle(maClass);
+      } else {
+        let classes = monElement[i].className.split(" ");
+        let i = classes.indexOf(maClass);
+
+        if (i >= 0) {
+          classes.splice(i, 1);
+        } else {
+          classes.push(maClass);
+          monElement[i].className = classes.join(" ");
+        }
+      }
+    }
+  } else {
     if (monElement.classList) {
       monElement.classList.toggle(maClass);
     } else {
@@ -137,17 +175,29 @@ function toggleClass(maClass, monElement){
         monElement.className = classes.join(" ");
       }
     }
+  }
 }
 
 
 function show(monElement) {
-  monElement.style.display = "initials";
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      monElement[i].style.display = "initials";
+    }
+  } else {
+    monElement.style.display = "initials";
+  }
 }
 
 function hide(monElement) {
-  monElement.style.display = "none";
+  if(monElement.length != undefined){
+    for (let i = 0; i < monElement.length; i++) {
+      monElement[i].style.display = "none";
+    }
+  } else {
+    monElement.style.display = "none";
+  }
 }
-
 
 function CL(msg){
   console.log(msg);
