@@ -112,9 +112,9 @@ function vSeb(quoiChopper){
 
 function on(monEvent,monElement,monAction){
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      monElement[i].addEventListener(monEvent,monAction,false);
-    }
+    each(monElement,(elt)=>{
+      elt.addEventListener(monEvent,monAction,false);
+    });
   } else {
     monElement.addEventListener(monEvent,monAction,false);
   }
@@ -122,12 +122,12 @@ function on(monEvent,monElement,monAction){
 
 function addClass(maClass,monElement) {
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      let mesClass = monElement[i].className.split(" ");
+    each(monElement,(elt)=>{
+      let mesClass = elt.className.split(" ");
       if (mesClass.indexOf(maClass) == -1) {
-        monElement[i].className += " " + maClass;
+        elt.className += " " + maClass;
       }
-    }
+    });
   } else {
     let mesClass = monElement.className.split(" ");
     if (mesClass.indexOf(maClass) == -1) {
@@ -137,30 +137,30 @@ function addClass(maClass,monElement) {
 }
 function delClass(maClass,monElement){
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      monElement[i].className = monElement[i].className.replace(maClass, "");
-    }
+    each(monElement,(elt)=>{
+      elt.className = elt.className.replace(maClass, "");
+    });
   } else {
     monElement.className = monElement.className.replace(maClass, "");
   }
 }
 function toggleClass(maClass, monElement){
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      if (monElement[i].classList) {
-        monElement[i].classList.toggle(maClass);
+    each(monElement,(elt)=>{
+      if (elt.classList) {
+        elt.classList.toggle(maClass);
       } else {
-        let classes = monElement[i].className.split(" ");
+        let classes = elt.className.split(" ");
         let i = classes.indexOf(maClass);
 
         if (i >= 0) {
           classes.splice(i, 1);
         } else {
           classes.push(maClass);
-          monElement[i].className = classes.join(" ");
+          elt.className = classes.join(" ");
         }
       }
-    }
+    });
   } else {
     if (monElement.classList) {
       monElement.classList.toggle(maClass);
@@ -181,9 +181,9 @@ function toggleClass(maClass, monElement){
 
 function show(monElement) {
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      monElement[i].style.display = "initials";
-    }
+    each(monElement,(elt)=>{
+      elt.style.display = "initials";
+    });
   } else {
     monElement.style.display = "initials";
   }
@@ -191,9 +191,9 @@ function show(monElement) {
 
 function hide(monElement) {
   if(monElement.length != undefined){
-    for (let i = 0; i < monElement.length; i++) {
-      monElement[i].style.display = "none";
-    }
+    each(monElement,(elt)=>{
+      elt.style.display = "none";
+    });
   } else {
     monElement.style.display = "none";
   }
@@ -206,14 +206,8 @@ function CE(msg){
   console.error(msg);
 }
 
-
-
-
-
-
-
-
-
-
-
-
+function each(Tableau,myFunction){
+  for(let i = 0; i < Tableau.length; i++) {
+    myFunction(Tableau[i])
+  }
+}
