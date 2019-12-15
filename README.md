@@ -47,7 +47,7 @@ This will call your function when the choosen event is executed on the choosen e
 Think of this one as a sentance like :
 On this event from this element do this.
 
-Exemple:
+How to Use:
 > on("eventName","selectedElement(s)",function to do)
 
 
@@ -55,6 +55,8 @@ Exemple:
 ## each()
 
 A function to make an action on multiple elements (array,string...)
+
+How to Use:
 >each(myElements,(elt)=>{
   myfunction here with elt which is the current element
 });
@@ -74,7 +76,7 @@ yes
 
 This will add a class on the choosen element(s)
 
-Exemple:
+How to Use:
 > addClass("myClass",myElement(s))
 
 
@@ -83,7 +85,7 @@ Exemple:
 
 This will remove a class on the choosen element(s)
 
-Exemple:
+How to Use:
 > delClass("myClass",myElement(s))
 
 
@@ -92,7 +94,7 @@ Exemple:
 This will add a class on the choosen element(s) which does not have already the class 
 AND this will remove the class on the choose, element(s) chich does already have the class.
 
-Exemple:
+How to Use:
 > togglClass("myClass",myElement(s))
 
 
@@ -101,7 +103,7 @@ Exemple:
 
 This will display an elements which is currently not displayed.
 
-Exemple:
+How to Use:
 > show(myElement(s))
 
 
@@ -110,7 +112,7 @@ Exemple:
 
 This will hide an elements which is currently displayed.
 
-Exemple:
+How to Use:
 > hide(myElement(s))
 
 
