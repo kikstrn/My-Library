@@ -270,7 +270,7 @@ function each(Tableau,myFunction){
   }
 }
 function ready(myFunction){
-  //Each time the state of the DOM change 
+  //Each time the state of the DOM change
   //Check if the DOM is ready
   //If yes do the action wanted
   document.onreadystatechange = () => {

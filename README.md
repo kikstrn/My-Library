@@ -2,10 +2,6 @@
  You know JQuery ? i try to remake it for me with more precision for some thing and by adding more arranging feature.
 
 ## To Integrate it to your project :
-Compressed Version:
-<script src="https://devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary-min.js"></script>
-
-Uncompressed Version:
 <script src="https://devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary.js"></script>
 
 ## Explanation of all the available commands :
@@ -51,28 +47,8 @@ This will call your function when the choosen event is executed on the choosen e
 Think of this one as a sentance like :
 On this event from this element do this.
 
-How to Use:
-> on("eventName","selectedElement(s)",function to do)
-
-
-
-## each()
-
-A function to make an action on multiple elements (array,string...)
-
-How to Use:
->each(myElements,(elt)=>{
-  myfunction here with elt which is the current element
-});
-
 Exemple:
->let Table = ["hi","hello","yes"];  
-each(Table,(elt)=>{CL(elt)})
-
-this will return 
->hi  
-hello  
-yes
+> on("eventName","selectedElement(s)",function to do)
 
 
 
@@ -80,7 +56,7 @@ yes
 
 This will add a class on the choosen element(s)
 
-How to Use:
+Exemple:
 > addClass("myClass",myElement(s))
 
 
@@ -89,7 +65,7 @@ How to Use:
 
 This will remove a class on the choosen element(s)
 
-How to Use:
+Exemple:
 > delClass("myClass",myElement(s))
 
 
@@ -98,26 +74,16 @@ How to Use:
 This will add a class on the choosen element(s) which does not have already the class 
 AND this will remove the class on the choose, element(s) chich does already have the class.
 
-How to Use:
+Exemple:
 > togglClass("myClass",myElement(s))
 
-
-
-## addStyle()
-
-This will add a one or more style an element(s)
-
-How to Use:
-> addStyle(myElement(s),["myStyle:value","anotherStyle:value"])
-
-The second parameters should always be in an array even if you only have one style to add.
 
 
 ## show()
 
 This will display an elements which is currently not displayed.
 
-How to Use:
+Exemple:
 > show(myElement(s))
 
 
@@ -126,17 +92,8 @@ How to Use:
 
 This will hide an elements which is currently displayed.
 
-How to Use:
+Exemple:
 > hide(myElement(s))
-
-
-
-## ready()
-
-This will do what you say it to do when the DOM is ready
-
-How to Use:
-> ready(myAction)
 
 
 
