@@ -211,3 +211,10 @@ function each(Tableau,myFunction){
     myFunction(Tableau[i])
   }
 }
+function ready(myFunction){
+  document.onreadystatechange = () => {
+    if (document.readyState === 'complete') {
+      myFunction;
+    }
+  };
+}
