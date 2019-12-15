@@ -99,6 +99,16 @@ How to Use:
 
 
 
+## addStyle()
+
+This will add a one or more style an element(s)
+
+How to Use:
+> addStyle(myElement(s),["myStyle:value","anotherStyle:value"])
+
+The second parameters should always be in an array even if you only have one style to add.
+
+
 ## show()
 
 This will display an elements which is currently not displayed.
