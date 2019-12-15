@@ -179,6 +179,29 @@ function toggleClass(maClass, monElement){
 }
 
 
+function addStyle(myElement,myStyle){
+  if(myElement.length != undefined){
+    each(myElement,(elt)=>{
+      if(myStyle.length>2){
+        for (let i = 0; i < myStyle.length; i++) {
+          elt.setAttribute("style",myStyle[i]);
+        }
+      }else{
+        elt.setAttribute("style",myStyle[0]);
+      }
+    });
+  } else {
+    if(myStyle.length>2){
+      for (let i = 0; i < myStyle.length; i++) {
+        myElement.setAttribute("style",myStyle[i]);
+      }
+    }else{
+      myElement.setAttribute("style",myStyle[0]);
+    }
+  }
+}
+
+
 function show(monElement) {
   if(monElement.length != undefined){
     each(monElement,(elt)=>{
