@@ -52,6 +52,24 @@ Exemple:
 
 
 
+## each()
+
+A function to make an action on multiple elements (array,string...)
+>each(myElements,(elt)=>{
+  myfunction here with elt which is the current element
+});
+
+Exemple:
+>let Table = ["hi","hello","yes"];  
+each(Table,(elt)=>{CL(elt)})
+
+this will return 
+>hi  
+hello  
+yes
+
+
+
 ## addClass()
 
 This will add a class on the choosen element(s)
