@@ -4,8 +4,8 @@
 ## To Integrate it to your project :
 Compressed Version:  
 <script src="https&#58;//devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary-min.js"></script>
-
-Uncompressed Version:  
+</br>
+Uncompressed Version:</br>
 <script src="https&#58;//devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary.js"></script>
 
 ## Explanation of all the available commands :
