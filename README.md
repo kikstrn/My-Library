@@ -2,11 +2,11 @@
  You know JQuery ? i try to remake it for me with more precision for some thing and by adding more arranging feature.
 
 ## To Integrate it to your project :
-Compressed Version:
-<script src="https://devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary-min.js"></script>
+Compressed Version:  
+<script src="https&#58;//devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary-min.js"></script>
 
-Uncompressed Version:
-<script src="https://devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary.js"></script>
+Uncompressed Version:  
+<script src="https&#58;//devwebaupif.000webhostapp.com/Projets/MyLibrary/myLibrary.js"></script>
 
 ## Explanation of all the available commands :
 
