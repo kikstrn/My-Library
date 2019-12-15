@@ -117,6 +117,15 @@ How to Use:
 
 
 
+## ready()
+
+This will do what you say it to do when the DOM is ready
+
+How to Use:
+> ready(myAction)
+
+
+
 ## CL()
 
 It is a simplified console.log().
