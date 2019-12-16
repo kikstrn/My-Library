@@ -1,4 +1,4 @@
-function vSeb(quoiChopper){
+function FC(quoiChopper){
   let canHaveName = ["button","fieldset","form","iframe","input","map","meta","object","output","param","select","textarea"];
   let canIt = false;
   let indName = -1;
