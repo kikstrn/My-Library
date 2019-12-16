@@ -25,7 +25,7 @@ function FC(quoiChopper){
             if(document.getElementsByClassName(valueAvantName)[allEltToGet].name==tempStore){
               arrOfElt.push(document.getElementsByClassName(valueAvantName)[allEltToGet]);
               canIt = true;
-              break
+              break;
             }
           }
         }
